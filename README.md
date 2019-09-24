@@ -36,7 +36,7 @@ eles receberão. Cada interação consiste em uma solicitação ASCII, seguida p
 822 semelhante ao MIME. Todos os clientes e todos os servidores devem obedecer a esse protocolo.
 Ele é definido na RFC 2616."
 
-![Drag Racing](tutorial_http_server/images/Fetching_a_page.png)
+![Fetching a page](master/images/Fetching_a_page.png)
 
 Os métodos internos de solicitações HTTP:
 
