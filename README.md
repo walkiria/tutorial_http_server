@@ -133,7 +133,7 @@ python3 server.py
 
 ### HTTP and HTTPS protocols (including security) - headers, authorization, authentication, cookies, sessions.
 
-- Headers: forma de servidores e clientes passarem informações adicionais com a solicitação ou a resposta HTTP. 
+- Headers (https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers): forma de servidores e clientes passarem informações adicionais com a solicitação ou a resposta HTTP. 
   - Cabeçalhos podem ser classificados de acordo com os seus contextos:
     - Cabeçalho genérico: Cabeçalhos que podem ser usados tanto em solicitações quanto em respostas, porém sem relação com os dados eventualmente transmitidos no corpo da mensagem.
     - Cabeçalho de solicitação: Cabeçalhos contendo mais informação sobre o recurso a ser obtido ou sobre o próprio cliente.
@@ -144,6 +144,20 @@ python3 server.py
     - End-to-end headers: Esses cabeçalhos devem ser transmitidos para o destinatário final da mensagem; isso é, o servidor em caso de solicitação ou o cliente caso resposta. Proxies intermediários devem reenviar cabeçalhos de end-to-end sem alterações e caches devem armazená-los.
     - Hop-by-hop headers: Esses cabeçalhos são significativos apenas para uma única conexão a nível de transporte e não devem ser reenviados por proxies ou armazenados em cache. Tais cabeçalhos são: Connection, Keep-Alive, Proxy-Authenticate, Proxy-Authorization, TE, Trailer, Transfer-Encoding and Upgrade. Observe que apenas cabeçalhos hop-by-hop podem ser definidos utilizando o cabeçalho genérico Connection.
 
+
+- Authorization (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization):  The HTTP Authorization request header contains the credentials to authenticate a user agent with a server, usually after the server has responded with a 401 Unauthorized status and the WWW-Authenticate header.
+
+- Authentication (https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Authentication): O HTTP fornece uma estrutura geral para controle de acesso e autenticação. A autenticação HTTP mais comum é fundamentada no esquema "Basic"
+
+- Cookies (https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies): Um cookie HTTP (um cookie web ou cookie de browser) é um pequeno fragmento de dados que um servidor envia para o navegador do usuário. O navegador pode então armazenar estes dados e enviá-los de volta com a próxima requisição para o mesmo servidor. Normalmente é utilizado para identificar se duas requisições vieram do mesmo navegador — ao manter um usuário logado, por exemplo. Ele guarda informações dinâmicas para o protocolo HTTP sem estado.
+
+Cookies são usados principalmente para três propósitos:
+
+  - Gerenciamento de sessão: Logins, carrinhos de compra, placar de games ou qualquer outra atividade que deva ser guardada por um servidor.
+  - Personalização: Preferências de usuário, temas e outras configurações.
+  - Rastreamento: Gravação e análise do comportamento de um usuário.
+
+- Sessions (): 
 
 
 # Referências
