@@ -74,11 +74,35 @@ Os métodos internos de solicitações HTTP:
 | 5xx | Erro do servidor | 500 = internal server error; 503 = try again later |
 
 
+# O que é um servidor?
+
+Pode parecer uma coisa muito complicada, mas um servidor, nada mais é, do que um um computador que armazena arquivos que compoem os sites, pode ser até o seu computador. Normalmente os servidores estao conectados a internet e podem ser acessados atráves do seu DNS. O servidor web inclui componentes que controlam como os usuários acessam os arquivos hospedados, como por exemplo, um servidor HTTP que compreende URLs e o protocolo que o navegador utiliza para acessar as paginas.
+
+A imagem acima mostra o navegador solicitando dados do web server e esse retornando as informações hospedadadas. 
+
+Um servidor pode ser estático ou dinâmico.No primeiro caso, as informações são entregues tal como foram criadas. Já no segundo caso, existe um servidor de aplicação e um banco de dados e as informações podem ser atualizadas antes de serem enviadas ao navegador. 
+
 # Mãos a obra: é hora de configurar o servidor
 
 (Tutorial baseado em https://www.afternerd.com/blog/python-http-server/)
 
 Vamos criar o nosso servidor usando Python:
+
+### Passo 1: Criar um arquivo html 
+
+```
+<html>
+    <head>
+        <title>Python is awesome!</title>
+    </head>
+    <body>
+        <h1>Afternerd</h1>
+        <p>Congratulations! The HTTP Server is working!</p>
+    </body>
+</html>
+```
+
+
 
 
 # Referências
