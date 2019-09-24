@@ -21,4 +21,11 @@ As camadas são:
 |Physical|                       |     Bits |                     NA |
 
 
+
+### Protocolos
+Protocolos definem regras que:
+- estabelece o formato e a ordem das mensagens as ações a serem tomadas na transmissão e recepção das mensagens
+
+
 ## HTTP
+
