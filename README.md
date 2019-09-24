@@ -37,6 +37,7 @@ eles receberão. Cada interação consiste em uma solicitação ASCII, seguida p
 Ele é definido na RFC 2616."
 
 ![Fetching a page](images/Fetching_a_page.png)
+(Ref.:)
 
 As principais características do HTTP são:
 
@@ -127,7 +128,7 @@ httpd.serve_forever()
 python3 server.py
 ```
 
-![Fetching a page](images/resultado.png)
+![Resultado](images/resultado.png)
 
 
 
