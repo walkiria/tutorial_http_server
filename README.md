@@ -36,7 +36,17 @@ eles receberão. Cada interação consiste em uma solicitação ASCII, seguida p
 822 semelhante ao MIME. Todos os clientes e todos os servidores devem obedecer a esse protocolo.
 Ele é definido na RFC 2616."
 
-![Fetching a page](master/images/Fetching_a_page.png)
+![Fetching a page](images/Fetching_a_page.png)
+
+As principais características do HTTP são:
+
+- orientado a conexão
+- autocontida: não guarda o estado
+- suporte para uso de cache:  o navegador guarda uma cópia da pagina, quando ela for acessada uma segunda vez o navegador pergunta se teve alguma alteração desde o último acesso
+- Transferência bidirecional: tanto servidores quanto navegadores transmitem dados
+- Suporte intermediário: servidores proxy
+
+
 
 Os métodos internos de solicitações HTTP:
 
@@ -63,3 +73,5 @@ Os métodos internos de solicitações HTTP:
 | 4xx | Erro do cliente | 403 = forbidden page; 404 = page can not found |
 | 5xx | Erro do servidor | 500 = internal server error; 503 = try again later |
 
+
+# Mãos a obra: é hora de configurar o servidor
