@@ -36,7 +36,18 @@ eles receberão. Cada interação consiste em uma solicitação ASCII, seguida p
 822 semelhante ao MIME. Todos os clientes e todos os servidores devem obedecer a esse protocolo.
 Ele é definido na RFC 2616."
 
-![Drag Racing](Fetching_a_page.jpg)
+![Fetching a page](images/Fetching_a_page.png)
+(Ref.:)
+
+As principais características do HTTP são:
+
+- orientado a conexão
+- autocontida: não guarda o estado
+- suporte para uso de cache:  o navegador guarda uma cópia da pagina, quando ela for acessada uma segunda vez o navegador pergunta se teve alguma alteração desde o último acesso
+- Transferência bidirecional: tanto servidores quanto navegadores transmitem dados
+- Suporte intermediário: servidores proxy
+
+
 
 Os métodos internos de solicitações HTTP:
 
@@ -62,4 +73,70 @@ Os métodos internos de solicitações HTTP:
 | 3xx | Redirecionamento | 301 = page moved; 304 = cached page still valid |
 | 4xx | Erro do cliente | 403 = forbidden page; 404 = page can not found |
 | 5xx | Erro do servidor | 500 = internal server error; 503 = try again later |
+
+
+# O que é um servidor?
+
+Pode parecer uma coisa muito complicada, mas um servidor, nada mais é, do que um um computador que armazena arquivos que compoem os sites, pode ser até o seu computador. Normalmente os servidores estao conectados a internet e podem ser acessados atráves do seu DNS. O servidor web inclui componentes que controlam como os usuários acessam os arquivos hospedados, como por exemplo, um servidor HTTP que compreende URLs e o protocolo que o navegador utiliza para acessar as paginas.
+
+A imagem acima mostra o navegador solicitando dados do web server e esse retornando as informações hospedadadas. 
+
+Um servidor pode ser estático ou dinâmico.No primeiro caso, as informações são entregues tal como foram criadas. Já no segundo caso, existe um servidor de aplicação e um banco de dados e as informações podem ser atualizadas antes de serem enviadas ao navegador. 
+
+# Mãos a obra: é hora de configurar o servidor
+
+(Tutorial baseado em https://www.afternerd.com/blog/python-http-server/)
+
+Vamos criar o nosso servidor usando Python:
+
+### Passo 1: Criar um arquivo html 
+
+```
+<html>
+    <head>
+        <title>Python is awesome!</title>
+    </head>
+    <body>
+        <h1>Afternerd</h1>
+        <p>Congratulations! The HTTP Server is working!</p>
+    </body>
+</html>
+```
+
+### Passo 2: Criar o servidor usando Pyhton
+
+```
+import http.server
+import socketserver
+
+PORT = 8080  # porta em que o servidor vai rodar
+Handler = http.server.SimpleHTTPRequestHandler  # manipulador de solicitações http
+
+httpd =socketserver.TCPServer(("", PORT), Handler)   #
+#with socketserver.TCPServer(("", PORT), Handler) as httpd:
+print("serving at port", PORT)
+
+#serve_forever is a method on the TCPServer instance
+# that starts the server and begins listening and responding to incoming requests.
+httpd.serve_forever()
+
+```
+
+### Passo 3: Executar o código 
+
+```
+python3 server.py
+```
+
+![Resultado](images/resultado.png)
+
+
+
+
+# Referências
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview
+-
+
+
+
 
