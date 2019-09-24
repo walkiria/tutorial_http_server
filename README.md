@@ -12,12 +12,13 @@ A comunicação é feita em etapas por meio de camadas e protocolos.
 
 As camadas são:
 
-Camada          Protocol            Protocol Data Unit      Addressing
-Application     HTTP, SMTP, etc     Messages                NA  
-Transport       TCP, UDP            Segment                 Port #
-Network         IP                  Datagram                IP adress  
-Data Link       Ethernet, Wifi      Frames                  MAC adress
-Physical                            Bits                     NA
+| Camada |         Protocol |           Protocol Data Unit |     Addressing|
+|--------|------------------|------------------------------|---------------|
+|Application|     HTTP, SMTP, etc|     Messages |               NA |  
+|Transport|       TCP, UDP|            Segment |                 Port # |
+|Network|         IP|                  Datagram |                IP adress |  
+|Data Link|       Ethernet, Wifi|      Frames |                  MAC adress |
+|Physical|                       |     Bits |                     NA |
 
 
 ## HTTP
