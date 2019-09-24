@@ -102,6 +102,33 @@ Vamos criar o nosso servidor usando Python:
 </html>
 ```
 
+### Passo 2: Criar o servidor usando Pyhton
+
+```
+import http.server
+import socketserver
+
+PORT = 8080  # porta em que o servidor vai rodar
+Handler = http.server.SimpleHTTPRequestHandler  # manipulador de solicitações http
+
+httpd =socketserver.TCPServer(("", PORT), Handler)   #
+#with socketserver.TCPServer(("", PORT), Handler) as httpd:
+print("serving at port", PORT)
+
+#serve_forever is a method on the TCPServer instance
+# that starts the server and begins listening and responding to incoming requests.
+httpd.serve_forever()
+
+```
+
+### Passo 3: Executar o código 
+
+```
+python3 server.py
+```
+
+![Fetching a page](images/resultado.png)
+
 
 
 
