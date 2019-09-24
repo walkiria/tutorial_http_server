@@ -75,3 +75,16 @@ Os métodos internos de solicitações HTTP:
 
 
 # Mãos a obra: é hora de configurar o servidor
+
+(Tutorial baseado em https://www.afternerd.com/blog/python-http-server/)
+
+Vamos criar o nosso servidor usando Python:
+
+
+# Referências
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview
+-
+
+
+
+
