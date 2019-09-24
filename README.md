@@ -27,7 +27,7 @@ Protocolos definem regras que:
 - estabelece o formato e a ordem das mensagens as ações a serem tomadas na transmissão e recepção das mensagens
 
 
-## HTTP
+## HTTP- HyperText Transfer Protocol 
 Segundo Tanembaum:
 
 "O protocolo de transferência utilizado em toda a World Wide Web é o HTTP (HyperText Transfer
@@ -36,6 +36,7 @@ eles receberão. Cada interação consiste em uma solicitação ASCII, seguida p
 822 semelhante ao MIME. Todos os clientes e todos os servidores devem obedecer a esse protocolo.
 Ele é definido na RFC 2616."
 
+![Drag Racing](Fetching_a_page.jpg)
 
 Os métodos internos de solicitações HTTP:
 
