@@ -134,17 +134,15 @@ python3 server.py
 ### HTTP and HTTPS protocols (including security) - headers, authorization, authentication, cookies, sessions.
 
 - Headers: forma de servidores e clientes passarem informações adicionais com a solicitação ou a resposta HTTP. 
--- Cabeçalhos podem ser classificados de acordo com os seus contextos:
----Cabeçalho genérico: Cabeçalhos que podem ser usados tanto em solicitações quanto em respostas, porém sem relação com os dados eventualmente transmitidos no corpo da mensagem.
----Cabeçalho de solicitação: Cabeçalhos contendo mais informação sobre o recurso a ser obtido ou sobre o próprio cliente.
----Cabeçalho de resposta: Cabeçalhos contendo informação adicional sobre a solicitação, como a sua localização ou sobre o servidor.
----Cabeçalho de entidade: Cabeçalhos contendo mais informação sobre o conteúdo da entidade, como o tamanho do conteúdo ou o seu MIME-type.
+  - Cabeçalhos podem ser classificados de acordo com os seus contextos:
+    - Cabeçalho genérico: Cabeçalhos que podem ser usados tanto em solicitações quanto em respostas, porém sem relação com os dados eventualmente transmitidos no corpo da mensagem.
+    - Cabeçalho de solicitação: Cabeçalhos contendo mais informação sobre o recurso a ser obtido ou sobre o próprio cliente.
+    - Cabeçalho de resposta: Cabeçalhos contendo informação adicional sobre a solicitação, como a sua localização ou sobre o servidor.
+    - Cabeçalho de entidade: Cabeçalhos contendo mais informação sobre o conteúdo da entidade, como o tamanho do conteúdo ou o seu MIME-type.
 
--- Cabeçalhos também podem ser classificados de acordo com a forma que são manipulados por proxies.
----End-to-end headers
-Esses cabeçalhos devem ser transmitidos para o destinatário final da mensagem; isso é, o servidor em caso de solicitação ou o cliente caso resposta. Proxies intermediários devem reenviar cabeçalhos de end-to-end sem alterações e caches devem armazená-los.
----Hop-by-hop headers
-Esses cabeçalhos são significativos apenas para uma única conexão a nível de transporte e não devem ser reenviados por proxies ou armazenados em cache. Tais cabeçalhos são: Connection, Keep-Alive, Proxy-Authenticate, Proxy-Authorization, TE, Trailer, Transfer-Encoding and Upgrade. Observe que apenas cabeçalhos hop-by-hop podem ser definidos utilizando o cabeçalho genérico Connection.
+  - Cabeçalhos também podem ser classificados de acordo com a forma que são manipulados por proxies.
+    - End-to-end headers: Esses cabeçalhos devem ser transmitidos para o destinatário final da mensagem; isso é, o servidor em caso de solicitação ou o cliente caso resposta. Proxies intermediários devem reenviar cabeçalhos de end-to-end sem alterações e caches devem armazená-los.
+    - Hop-by-hop headers: Esses cabeçalhos são significativos apenas para uma única conexão a nível de transporte e não devem ser reenviados por proxies ou armazenados em cache. Tais cabeçalhos são: Connection, Keep-Alive, Proxy-Authenticate, Proxy-Authorization, TE, Trailer, Transfer-Encoding and Upgrade. Observe que apenas cabeçalhos hop-by-hop podem ser definidos utilizando o cabeçalho genérico Connection.
 
 
 
