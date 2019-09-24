@@ -152,10 +152,9 @@ python3 server.py
 - Cookies (https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies): Um cookie HTTP (um cookie web ou cookie de browser) é um pequeno fragmento de dados que um servidor envia para o navegador do usuário. O navegador pode então armazenar estes dados e enviá-los de volta com a próxima requisição para o mesmo servidor. Normalmente é utilizado para identificar se duas requisições vieram do mesmo navegador — ao manter um usuário logado, por exemplo. Ele guarda informações dinâmicas para o protocolo HTTP sem estado.
 
 Cookies são usados principalmente para três propósitos:
-
-  - Gerenciamento de sessão: Logins, carrinhos de compra, placar de games ou qualquer outra atividade que deva ser guardada por um servidor.
-  - Personalização: Preferências de usuário, temas e outras configurações.
-  - Rastreamento: Gravação e análise do comportamento de um usuário.
+    - Gerenciamento de sessão: Logins, carrinhos de compra, placar de games ou qualquer outra atividade que deva ser guardada por um servidor.
+    - Personalização: Preferências de usuário, temas e outras configurações.
+    - Rastreamento: Gravação e análise do comportamento de um usuário.
 
 - Sessions (): 
 
